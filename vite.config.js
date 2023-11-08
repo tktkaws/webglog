@@ -17,7 +17,10 @@ export default defineConfig({
         // Modified to remove multiline comments. See #16
         let needNewline = false;
         return code
-          .replace(/\\(?:\r\n|\n\r|\n|\r)|\/\*.*?\*\/|\/\/(?:\\(?:\r\n|\n\r|\n|\r)|[^\n\r])*/gs, "")
+          .replace(
+            /\\(?:\r\n|\n\r|\n|\r)|\/\*.*?\*\/|\/\/(?:\\(?:\r\n|\n\r|\n|\r)|[^\n\r])*/gs,
+            ""
+          )
           .split(/\n+/)
           .reduce((result, line) => {
             line = line.trim().replace(/\s{2,}|\t/, " "); // lgtm[js/incomplete-sanitization]
@@ -28,7 +31,12 @@ export default defineConfig({
               result.push(line, "\n");
               needNewline = false;
             } else {
-              result.push(line.replace(/\s*({|}|=|\*|,|\+|\/|>|<|&|\||\[|\]|\(|\)|-|!|;)\s*/g, "$1"));
+              result.push(
+                line.replace(
+                  /\s*({|}|=|\*|,|\+|\/|>|<|&|\||\[|\]|\(|\)|-|!|;)\s*/g,
+                  "$1"
+                )
+              );
               needNewline = true;
             }
             return result;
@@ -51,6 +59,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(root, "index.html"),
+        integration: resolve(root, "integration/index.html"),
       },
     },
   },
