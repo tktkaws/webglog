@@ -62,6 +62,8 @@ export default defineConfig({
         render_target: resolve(root, "render_target/index.html"),
         render_target_shader: resolve(root, "render_target_shader/index.html"),
         postprocessing: resolve(root, "postprocessing/index.html"),
+        pp_shader_pass: resolve(root, "pp_shader_pass/index.html"),
+        pp_custom_shader: resolve(root, "pp_custom_shader/index.html"),
         integration: resolve(root, "integration/index.html"),
         load_texture: resolve(root, "texture/01_load_texture/index.html"),
         texture_sizing: resolve(root, "texture/02_texture_sizing/index.html"),
