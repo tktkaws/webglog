@@ -59,7 +59,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(root, "index.html"),
+        render_target: resolve(root, "render_target/index.html"),
         integration: resolve(root, "integration/index.html"),
+        load_texture: resolve(root, "texture/01_load_texture/index.html"),
+        texture_sizing: resolve(root, "texture/02_texture_sizing/index.html"),
+        loading_progress: resolve(root, "loading_progress/index.html"),
+        video_texture: resolve(root, "video_texture/index.html"),
       },
     },
   },
