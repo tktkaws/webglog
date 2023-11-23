@@ -69,6 +69,14 @@ export default defineConfig({
         texture_sizing: resolve(root, "texture/02_texture_sizing/index.html"),
         loading_progress: resolve(root, "loading_progress/index.html"),
         video_texture: resolve(root, "video_texture/index.html"),
+        shader_material: resolve(
+          root,
+          "basic_shader/01_shader_material/index.html"
+        ),
+        shader_texture: resolve(
+          root,
+          "basic_shader/02_shader_texture/index.html"
+        ),
       },
     },
   },
