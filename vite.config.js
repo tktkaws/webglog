@@ -63,6 +63,7 @@ export default defineConfig({
         render_target_shader: resolve(root, "render_target_shader/index.html"),
         film: resolve(root, "postprocessing/film/index.html"),
         dotscreen: resolve(root, "postprocessing/dotscreen/index.html"),
+        glitch: resolve(root, "postprocessing/glitch/index.html"),
         pp_shader_pass: resolve(root, "pp_shader_pass/index.html"),
         pp_custom_shader: resolve(root, "pp_custom_shader/index.html"),
         integration: resolve(root, "integration/index.html"),
